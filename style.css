@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+  }
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 170px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    background: none; 
+    padding: 8px 17px;
+    
+
+}
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #080808;
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    border-radius: 5px;
+    transition: 500ms ease;
+}
+nav ul li a:hover::after{
+    left: 0%;
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    margin-left: 35%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 45px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #080808;
+}
+/*------about section-----*/
+#about{
+    padding: 85px 0;
+    color: #fff;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:reverse;
+}
+.row h1{
+    color: aqua;
+}
+.about-col2{
+    flex-basis: 35%;
+}
+.about-col2 img{
+    width: 360px;
+    border-radius: 15px;
+
+}
+.about-col1{
+    flex-basis: 60%;
+}
+.about-col1 p {
+    text-align: justify
+}
+.title{
+font-size: 45px;
+font-weight: 600;
+color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.title-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.title-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:aqua;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 500ms ease;
+}
+.title-links.active-link::after{
+    width: 100%;
+}
+.tab-content ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-content ul li span{
+    color: aqua;
+    font-size: 14px;
+}
+.tab-content ul li span1{
+    color: #ababab;
+    font-size:  13px;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active-tab{
+    display: block;
+}
+/*-------portfolio section------*/
+#portfolio{
+    padding: 40px;
+    position: relative;
+}
+.mywork {
+    color: aqua;
+    margin-bottom: 60px;
+}
+.blend {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    color: aqua;
+}
+#image-box {
+    background-color:rgb(31, 60, 58);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 500px;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+  }
+      
+      #displayed-image {
+        width: 590px;
+        height: 390px;
+      }
+      
+      button {
+        color:white;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color:rgb(31, 60, 58);
+        border: 2px solid aqua;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 500ms;
+      }
+    button:hover{
+        background: aqua;
+    }
+/*-------Contact Section------*/
+.left{
+    flex-basis: 35%;
+}
+.right{
+    flex-basis: 60%;
+}
+.left p{
+    margin-top: 30px;
+}
+.left p i{
+    color: aqua;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.sm-icons{
+    margin-top: 30px;
+}
+.sm-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 30px;
+    color: #ababab;
+    display: inline-block;
+    transition: 500ms ease;
+}
+.sm-icons a:hover{
+    color: aqua;
+    transform: translateY(-5px);
+}
+.btn{
+    padding: 14px 20px;
+    display: inline-block;
+    border: 1px solid aqua;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: 500ms ease;
+}
+.btn:hover{
+    background: aqua;
+}
+.right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: aquamarine;
+    padding: 15px;
+    margin: 15px;
+    color: #080808;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form button{
+    padding: 14px 60px;
+    display: inline-block;
+    border: 1px solid aqua;
+    border-radius: 6px;
+    margin-top: 15px;
+    margin-left: 40%;
+    margin-bottom: 140px;
+    text-decoration: none;
+    color: #fff;
+    background: #080808;
+    cursor: pointer;
+    transition: 500ms ease;
+}
+form button:hover{
+    background: aqua;
+}
+.copy{
+    width: 100%;
+    background: #ababab;
+    color: #080808;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 300;
+}

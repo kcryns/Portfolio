@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Pesonal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav id="navbar">
+          <img src="image/logo.png" class="logo">
+          <ul id="menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">My Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>  
+        </nav>
+        <div class="header-text">
+        <p>Aspiring UI/UX Designer</p>
+        <h1>Hi,<span> I'm Karl Cydrick Raynes</span> <br>From Sto.Tomas Batangas</h1>
+        </div>
+        </div>>
+    </div>
+    <!------about section------>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col1">
+            <h1 class="title">About Me</h1>
+            <p>Hello, my name is Karl Cydrick Raynes and I'm 22 years old from Barangay San Joaquin Sto.Tomas, Batangas, and I'm presently studying computer science at Laguna State Polytechnic University. My hobbies include watching movies, television shows, and anime. I also enjoy reading manga, comic books, and webcomics. My life goals are as follows: first, to complete and graduate from my studies; second, to acquire a suitable career; and, third, to help my family with our daily needs.</p>
+          <div class="tab-titles">
+            <p class="title-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="title-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-content active-tab" id="skills">
+            <ul>
+              <li>HTML/CSS</li>
+              <li>3D Modeling(Blender)</li>
+              <li>Microsoft Office</li>
+              <li>Problem Solving</li>
+              <li>Critical thinking</li>
+              <li>Can Work Under Pressure</li>
+            </ul>
+          </div>
+          <div class="tab-content" id="education">
+            <ul>
+              <li><span>Elementary</span><br>Gangahin Elementary School</li>
+              <li><span>Junior High School</span><br>San Pedro Relocation Center National High School</li>
+              <li><Span>Senior High Shool</Span><br>Almond Academy Incorporated</li>
+              <li><span>College</span><br>Laguna State Polytechnic University<br><span1>Bachelor of Science in Computer Science</span1></li>
+            
+            </ul>
+          </div>
+          </div>
+            <div class="about-col2">
+              <img src="image/myself.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!------------Portfolio--------->   
+<div id="portfolio">
+  <h1 class="title mywork">My Works</h1>
+  <div><h2 class="blend">Blender Works</h2></div>
+<div id="image-box">
+    <button id="prev-button">Prev</button>
+    <img src="" id="displayed-image">
+    <button id="next-button">Next</button>
+  </div>   
+</div>
+</div>
+
+<!------------Contact--------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="left">
+        <h1 class="title">Contact Me</h1>
+        <p><i class="fas fa-paper-plane"></i>rayneskarlcydrick@gmail.com</p>
+        <p><i class="fas fa-phone"></i>+639156045676</p>
+        <div class="sm-icons">
+          <a href="https://www.facebook.com/karlcydrick.raynes"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/Ako_sikarl"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/kc.ryns/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="image/resume.pdf" download class="btn">Download CV/Resume</a>
+      </div>
+      <div class="right">
+        <form onsubmit="Mail(); reset(); return false;">
+          <input type="text" id="name" placeholder="Your Name">
+          <input type="email" id="email" placeholder="Your Email">
+          <textarea id="message" rows="5" placeholder="Your message"></textarea>
+          <button type="submit" class="">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <p>Copyright &copy; Karl Cydrick Raynes 2022</p>
+  </div>
+</div>
+
+
+<!------------Script--------->
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+    <script>
+
+      var titlelinks = document.getElementsByClassName("title-links");
+      var tabcontent = document.getElementsByClassName("tab-content");
+
+      function opentab(tabname){
+        for(titlelink of titlelinks){
+          titlelink.classList.remove("active-link")
+        }
+        for(tabcon of tabcontent){
+          tabcon.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+
+      function Mail(){
+
+Email.send({
+SecureToken: "b64e917a-ffa5-4851-82bf-c5570f1fc7cb",
+To : 'rayneskarlcydrick@gmail.com',
+From : "zaleaugustus21@gmail.com",
+Subject : "Mail From Contact Form",
+Body : "Name: " + document.getElementById("name").value
+  + "<br>Email: " + document.getElementById("email").value 
+  + "<br>Message: " + document.getElementById("message").value 
+}).then(
+message => alert("Message Sent Successfully")
+);
+  }
+  const images = [
+  src = 'image/Blen1.png',
+  src = 'image/Blend2.png',
+  src = 'image/Blend3.png',
+  src = 'image/Blend4.png',
+  src = 'image/Blend5.png',
+  src = 'image/Blend6.png',
+  src = 'image/Blend7.png',
+  src = 'image/Blend8.png',
+  src = 'image/Blend9.png',
+
+  // Add more images as needed
+];
+
+const imageBox = document.getElementById('image-box');
+const displayedImage = document.getElementById('displayed-image');
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
+
+let currentImageIndex = 0;
+
+displayedImage.src = images[currentImageIndex];
+
+prevButton.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex + images.length - 1) % images.length;
+  displayedImage.src = images[currentImageIndex];
+});
+
+nextButton.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  displayedImage.src = images[currentImageIndex];
+});
+
+    </script>
+</body>
+</html>
